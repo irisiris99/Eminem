@@ -205,7 +205,6 @@ a:hover {
 /* image slider */
 #main {
   width: 100%;
-  height: auto;
   overflow: hidden;
 }
 .slider {
@@ -425,7 +424,17 @@ footer {
   #navbar {
     justify-content: center;
   }
-
+  #news {
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #news .box {
+    width: 40%;
+  }
+  #news .box h5 {
+    font-size: 14px;
+  }
   #news .box p {
     display: none;
   }
@@ -439,6 +448,12 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  #news {
+    height: 600px;
+  }
+  #news .box {
+    width: 200px;
+  }
   footer {
     border-bottom: 3px solid #b30000;
   }
