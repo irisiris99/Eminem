@@ -3,20 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-		
-
-		<!-- Main CSS -->
+		<!-- icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+		<!-- Css -->
 		<link rel="stylesheet" href="css/style.css">
 		<!-- JS -->
 		<script defer src="main.js"></script>
-		
-		<title>Eminem</title>
+		<!-- P5 -->
+		<script src="p5.min.js"></script>
+
+		<title>Eminem | Home</title>
 
 	</head>
 	<body>
@@ -39,14 +37,28 @@
 			</div>
 		</nav>
 
-			<!-- Slideshow container -->
-		<div class="container">
+			<!-- image slider -->
+		<div id="main">
 			<div class="slider">
-				<img src="images/main1.jpg">
-				<img src="images/main2.jpg">
-				<img src="images/main3.jpg">
-				<img src="images/main4.jpg">
+				<div class="slider_img">
+					<img src="images/main1.jpg" alt="">
+				</div>
+				<div class="slider_img">
+					<img src="images/main2.jpg" alt="">
+				</div>
+				<div class="slider_img">
+					<img src="images/main3.jpg" alt="">
+				</div>
+				<div class="slider_img">
+					<img src="images/main4.jpg" alt="">
+				</div>
 			</div>
+		</div>
+		<div class="buttons">
+			<button id="btn1">　</button>
+			<button id="btn2">　</button>
+			<button id="btn3">　</button>
+			<button id="btn4">　</button>
 		</div>
 
 
@@ -54,33 +66,203 @@
 		<!-- Article 1 -->
 		<article id="news">
 			<div class="box">
-				<a>
-					<img src="images/news_img1.jpg">
-					<h5>WATCH NOW: "LAST ONE STANDING"<br>LYRIC VIDEO</h5>
-					<p>New lyric video dropped for "Last One Standing" by Skylar Grey<br>ft. Polo G, Mozzy, & Eminem - from...</p>
-				</a>
+				<div class="boximg">
+					<img src="images/news_img1.jpg" onclick="window.open('https://www.youtube.com/watch?v=4haurn3S8z8&list=RD4haurn3S8z8&start_radio=1')">
+				</div>
+				<h5 onclick="window.open('https://www.youtube.com/watch?v=4haurn3S8z8&list=RD4haurn3S8z8&start_radio=1')">WATCH NOW: "LAST ONE STANDING"<br>LYRIC VIDEO</h5>
+				<p>New lyric video dropped for "Last One Standing" by Skylar Grey<br>ft. Polo G, Mozzy, & Eminem - from...</p>
 			</div>
 			<div class="box">
-				<a>
-					<img src="images/news_img2.jpg">
-					<h5>LITSEN NOW: "VENOM" REMIX</h5>
-					<p>Eminem releases the Remix for the track "Venom" - as the"B<br>Side" to the "Last One Standing" single...</p>
-				</a>
+				<div class="boximg">
+					<img src="images/news_img2.jpg" onclick="window.open('https://www.youtube.com/watch?v=DlOMEMFkyIk')">
+				</div>
+				<h5 onclick="window.open('https://www.youtube.com/watch?v=DlOMEMFkyIk')">LITSEN NOW: "VENOM" REMIX</h5>
+				<br>
+				<p>Eminem releases the Remix for the track "Venom" - as the"B<br>Side" to the "Last One Standing" single...</p>
 			</div>
 			<div class="box">
-				<a>
+				<div class="boximg" onclick="window.open('#')">
 					<img src="images/news_img3.jpg">
-					<h5>VENOM: LAST ONE STANDING CAPSULE<br>OUT NOW</h5>
-					<p>Exclusive to the Official Eminem Store, this collection features<br>designs inspired by the song "Last...</p>
-				</a>
+				</div>
+				<h5>VENOM: LAST ONE STANDING CAPSULE<br>OUT NOW</h5>
+				<p>Exclusive to the Official Eminem Store, this collection features<br>designs inspired by the song "Last...</p>
 			</div>
 			<div class="box">
-				<a>
-					<img src="images/news_img4.jpg">
-					<h5>LISTEN NOW: KILLER REMIX FT. JACK<br>HARLOW & CORDAE</h5>
-					<p>Eminem linked up with Jack Harlow & Cordae for a remix of the<br>track "Killer".The new remix is out...</p>
-				</a>
+				<div class="boximg">
+					<img src="images/news_img4.jpg" onclick="window.open('https://www.youtube.com/watch?v=FVeZcM6tBQU')">
+				</div>
+				<h5 onclick="window.open('https://www.youtube.com/watch?v=FVeZcM6tBQU')">LISTEN NOW: KILLER REMIX FT. JACK<br>HARLOW & CORDAE</h5>
+				<p>Eminem linked up with Jack Harlow & Cordae for a remix of the<br>track "Killer".The new remix is out...</p>
+			</div>
+
+		</article>
+		
+		<!-- Article 2 -->
+		<article id="art2">
+			<img src="images/art2_img.jpg">
+		</article>
+
+		<!-- Article 3 -->
+		<article id="art3">
+			<div class="buttons">
+				<button id="btn5">　</button>
+				<button id="btn6">　</button>
+				<button id="btn7">　</button>
+			</div>
+			<div class="wrap-img">
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab1.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=qM00SPx-Gao&list=OLAK5uy_kqHXZBl9FyDtb2UckFaLtvT2L0HLVnqTs')">
+					</div>
+					<div class="ab-text">
+						<p>Title : Infinite</p>
+						<p>Artist : Eminem</p>
+						<p>1996 / 11.12</p>
+						<p>Treak : 11</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab2.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=qM00SPx-Gao&list=OLAK5uy_kqHXZBl9FyDtb2UckFaLtvT2L0HLVnqTs')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=qM00SPx-Gao&list=OLAK5uy_kqHXZBl9FyDtb2UckFaLtvT2L0HLVnqTs')">
+						<p>Title : The Slim Shady LP</p>
+						<p>Artist : Eminem</p>
+						<p>1999 / 02.23</p>
+						<p>Treak : 20</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab3.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=0NmsogZClfM&list=OLAK5uy_nyRZBNr6_NOMq4osjNSBbB7xpS2L_AH8w')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=0NmsogZClfM&list=OLAK5uy_nyRZBNr6_NOMq4osjNSBbB7xpS2L_AH8w')">
+						<p>Title : The Marshall Mathers LP</p>
+						<p>Artist : Eminem</p>
+						<p>2000 / 05.23</p>
+						<p>Treak : 18+1</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab4.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=5o7AxtD3leM&list=OLAK5uy_k3OeCvxsTsJJq5BPfh9gHvFuPNng2kIWk')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=5o7AxtD3leM&list=OLAK5uy_k3OeCvxsTsJJq5BPfh9gHvFuPNng2kIWk')">
+						<p>Title : The Eminem Show</p>
+						<p>Artist : Eminem</p>
+						<p>2002 / 05.26</p>
+						<p>Treak : 20</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab5.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=5ZSshuS9YxM&list=OLAK5uy_k_3v1q5GTr5Jngo01yJBPJEX9EirgbfFc')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=5ZSshuS9YxM&list=OLAK5uy_k_3v1q5GTr5Jngo01yJBPJEX9EirgbfFc')">
+						<p>Title : Encore</p>
+						<p>Artist : Eminem</p>
+						<p>2004 / 11.12</p>
+						<p>Treak : 20+3</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab6.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=94JmRMOH83k&list=OLAK5uy_ltQp3k4tTYR_YVKJh_NtnubW3ttr6-MN4')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=94JmRMOH83k&list=OLAK5uy_ltQp3k4tTYR_YVKJh_NtnubW3ttr6-MN4')">
+						<p>Title : Relapse</p>
+						<p>Artist : Eminem</p>
+						<p>2009 / 05.19</p>
+						<p>Treak : 20+2</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab7.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=c4Yz9o5UtN8&list=OLAK5uy_m_oiFQ5FK6PCTzskpi60YNQwxKZqkVD1M')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=c4Yz9o5UtN8&list=OLAK5uy_m_oiFQ5FK6PCTzskpi60YNQwxKZqkVD1M')">
+						<p>Title : Recovery</p>
+						<p>Artist : Eminem</p>
+						<p>2010 / 06.18</p>
+						<p>Treak : 17+3</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab8.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=NFtsBBXDrGs&list=OLAK5uy_l0FbbGAEddn8zg-TkJLWjWTRRyvzV-SkY')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=NFtsBBXDrGs&list=OLAK5uy_l0FbbGAEddn8zg-TkJLWjWTRRyvzV-SkY')">
+						<p>Title : The Marshall Mathers LP2</p>
+						<p>Artist : Eminem</p>
+						<p>2013 / 11.05</p>
+						<p>Treak : 16+1+5</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab9.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=ryr75N0nki0&list=OLAK5uy_m8R1SwPPUCgq777T9Nt-zLRzaekFmhet0')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=ryr75N0nki0&list=OLAK5uy_m8R1SwPPUCgq777T9Nt-zLRzaekFmhet0')">
+						<p>Title : Revival</p>
+						<p>Artist : Eminem</p>
+						<p>2017 / 12.15</p>
+						<p>Treak : 19</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab10.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=ACNgFW50EbU&list=OLAK5uy_nId4aStP-eFWiSYeOJGwcoty17mIZjW8A')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=ACNgFW50EbU&list=OLAK5uy_nId4aStP-eFWiSYeOJGwcoty17mIZjW8A')">
+						<p>Title : Kamikaze</p>
+						<p>Artist : Eminem</p>
+						<p>2018 / 08.31</p>
+						<p>Treak : 13</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab11.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=hlFOLS7vKaQ&list=OLAK5uy_nyPpHefgBGBt_CgAaqT3PV6BLxh_tU59s')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=hlFOLS7vKaQ&list=OLAK5uy_nyPpHefgBGBt_CgAaqT3PV6BLxh_tU59s')">
+						<p>Title : Music To Be Murdered By</p>
+						<p>Artist : Eminem</p>
+						<p>2020 / 01.17 & 12.18(side B)</p>
+						<p>Treak : 20+16(side B)</p>
+					</div>
+				</div>
+				<div class="ab">
+					<div class="ab-img">
+						<img src="images/ab12.jpg" alt="#" onclick="window.open('https://www.youtube.com/watch?v=gXH7_XaGuPc')">
+					</div>
+					<div class="ab-text" onclick="window.open('https://www.youtube.com/watch?v=gXH7_XaGuPc')">
+						<p>Title : Last One Standing</p>
+						<p>Artist : Skylar Grey, Polo G,<br> Mozzy, Eminem</p>
+						<p>2021 / 09.30</p>
+					</div>
+				</div>
 			</div>
 		</article>
+
+		<article class="article4">
+			<div class="inputs">
+				<input type="search" value="EMAIL ADDRESS (REQUIRED)">
+				<input type="search" value="ZIP CODE">
+				<input type="search" value="UNITED STATES">
+				<p>By submitting this form I agree to receive news, tour dates, and special offers from Eminem. Emails will be sent by or on behalf of Universal Music Group 2220 Colorado Avenue, Santa Monica, CA 90404 (310) 865-4000. You may withdraw your consent at any time. Privacy Policy</p>
+				<h4>SUBSCRIBE</h4>
+			</div>
+		</article>
+
+		<footer>
+			<div class="icons">
+				<a href="https://www.youtube.com/channel/UCfM3zsQsOnfWNUppiycmBuw" target="_blank" class="bi bi-youtube"></a>
+				<a href="https://twitter.com/Eminem" target="_blank" class="bi bi-twitter"></a>
+				<a href="https://www.facebook.com/eminem" target="_blank" class="bi bi-facebook"></a>
+				<a href="https://www.instagram.com/eminem/" target="_blank" class="bi bi-instagram"></a>
+				<a href="https://music.apple.com/us/artist/eminem/111051" target="_blank" class="bi bi-apple"></a>
+				<a href="https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR" target="_blank" class="bi bi-spotify"></a>
+			</div>
+		</footer>
 	</body>
 </html>

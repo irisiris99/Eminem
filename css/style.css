@@ -55,12 +55,14 @@
   --border-radius-small: 2px;
 }
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--white-color);
   font-family: var(--base-font-family);
+  background-color: #282828;
 }
 
 /* Font Set */
@@ -160,7 +162,7 @@ a:hover {
   background-color: #cc0000;
 }
 .navbar_icons {
-  width: 25%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,134 +176,276 @@ a:hover {
   color: var(--white-color);
 }
 .navbar_logo {
-  width: 50%;
+  width: 20%;
   display: flex;
   justify-content: center;
 }
+
 .navbar_menu {
-  width: 25%;
-  height: 60px;
+  width: 40%;
 }
 .navbar_menu ul {
+  width: 100%;
   display: flex;
+  justify-content: center;
 }
 .navbar_menu ul li {
   padding: 8px;
-  margin-right: 10px;
-  margin-top: 2%;
-  background-color: black;
 }
 .navbar_menu ul li:hover {
   background-color: white;
 }
 .navbar_menu ul li a {
+  font-size: 0.8vw;
   padding: 8px;
 }
 
 /* Main */
-/* Slideshow container */
 
-.mySlides {
-  display: none;
+/* image slider */
+#main {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
-img {
-  vertical-align: middle;
+.slider {
+  width: 400vw;
+  height: auto;
+  transition: 0.4s ease-in-out;
+}
+.slider_img {
+  width: 100vw;
+  height: auto;
+  float: left;
+}
+.slider_img img {
+  width: 100%;
 }
 
-.slideshow-container {
-  max-width: 1000px;
+.buttons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  margin-bottom: 5%;
   position: relative;
-  margin: auto;
+  top: -3px;
+  border-top: 1px solid grey;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
+.buttons > button {
+  min-width: 8px;
+  height: 12px;
+  border: none;
+  background-color: ghostwhite;
+  border-radius: 100%;
+  margin: 10px;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  transition: 0.4s;
+}
+.buttons > button:hover {
+  background-color: red;
+}
+
+/* Article1 */
+#news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+}
+
+#news .box {
+  width: 22%;
+  height: 18vw;
+  padding: 8px 1%;
+}
+#news .box h5 {
+  font-size: 0.9vw;
+  cursor: pointer;
+  color: white;
+  transition: 0.35s;
+}
+#news .box h5:hover {
+  color: red;
+}
+#news .box p {
+  font-size: 0.7vw;
+}
+#news .boximg {
+  overflow: hidden;
+}
+#news .box img {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#news .box img:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Article 2 */
+#art2 img {
+  width: 100%;
+}
+
+/* Article 3 */
+#art3 {
+  width: 100%;
+  padding: 3% 0%;
+  overflow: hidden;
+  margin-bottom: 10vw;
+}
+#art3 .wrap-img {
+  width: 300vw;
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+#art3 .wrap-img .ab {
+  margin: 0% 1.1%;
+  transition: 0.5s ease-in;
+}
+
+#art3 .wrap-img .ab:hover .ab-text {
+  display: block;
+}
+#art3 .wrap-img .ab img {
+  cursor: pointer;
+  width: 100%;
+  float: left;
+}
+#art3 .wrap-img .ab-img:hover {
+  opacity: 0.5;
+}
+#art3 .wrap-img .ab-img {
+  overflow: hidden;
+}
+#art3 .wrap-img .ab p {
+  font-size: 0.9vw;
+  text-align: center;
+  color: white;
+  line-height: 2.5vw;
+  font-weight: bold;
+}
+#art3 .wrap-img .ab-text {
+  width: 100%;
+  height: 0;
+  position: relative;
+  top: -16vw;
+  display: none;
+  cursor: pointer;
+}
+#art3 .wrap-img .ab-text > p {
+  font-size: 0.9vw;
+}
+#art3 .buttons {
+  margin-bottom: 2%;
+  background-color: #282828;
+  border: none;
+}
+
+/* Article 4 */
+.article4 {
+  width: 100%;
+  background-image: url("../images/banner.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+}
+.article4 .inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: none;
+  padding-right: 3%;
+  padding-top: 2%;
+}
+.inputs input {
+  width: 100%;
+  height: auto;
+  background: none;
+  border: 1px solid white;
+  width: 350px;
+  margin: 16px 0px;
+  padding: 10px;
+  text-align: left;
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.inputs input:hover {
+  border: 1px solid red;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.inputs p {
+  width: 350px;
+  font-size: 8px;
+  color: black;
+  margin-bottom: 20px;
 }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
+.inputs h4 {
+  color: ghostwhite;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+}
+.inputs h4:hover {
+  color: black;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
+/* Footer */
+footer {
+  width: 100%;
+  opacity: 0.7;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  background-color: #cc0000;
+}
+.icons a {
+  padding: 8px 32px;
+}
+.icons a:hover {
+  background: ghostwhite;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
+@media screen and (max-width: 768px) {
+  .navbar_menu {
+    display: none;
   }
-  to {
-    opacity: 1;
+  .navbar_icons {
+    display: none;
+  }
+  #navbar {
+    justify-content: center;
+  }
+
+  #news .box p {
+    display: none;
+  }
+  .article4 .inputs {
+    display: none;
+  }
+
+  footer .icons > a {
+    font-size: 16px;
   }
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.4;
+@media screen and (max-width: 500px) {
+  footer {
+    border-bottom: 3px solid #b30000;
   }
-  to {
-    opacity: 1;
+  #art3 {
+    padding-top: 50px;
+  }
+  #art3 .wrap-img .ab .ab-text > p {
+    display: none;
   }
 }
