@@ -232,6 +232,7 @@ a:hover {
 .button {
   text-align: center;
   padding: 30px;
+  transition: 0.3s ease-in;
 }
 .button button {
   font-size: 24px;
@@ -246,4 +247,26 @@ a:hover {
 .button > button:hover {
   background-color: white;
   color: red;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  background-color: #cc0000;
+}
+.icons a {
+  padding: 8px 32px;
+}
+.icons a:hover {
+  background: ghostwhite;
 }
