@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* Set */
+
+@font-face {
+  font-family: "Plain";
+  src: url("../fonts/Plain-Regular.woff2") format("woff2"),
+    url("../fonts/Plain-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plain";
+  src: url("../fonts/Plain-Light.woff2") format("woff2"),
+    url("../fonts/Plain-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plain";
+  src: url("../fonts/Plain-Bold.woff2") format("woff2"),
+    url("../fonts/Plain-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --red-color: #f13a11;
+  --white-color: #ffffff;
+  --dark-color: #171819;
+  --ghostwhite-color: #f8f8f8;
+  --gray-color: #909090;
+  --darkgray-color: #404040;
+
+  --base-font-family: "Plain", sans-serif;
+
+  --font-weight-bold: bold;
+  --font-weight-normal: normal;
+  --font-weight-light: 300;
+  --font-weight-thin: 100;
+
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-size-h6: 18px;
+  --font-size-L: 16px;
+  --font-size-M: 14px;
+  --font-size-S: 12px;
+
+  --border-radius-large: 100%;
+  --border-radius-small: 2px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--white-color);
+  background-color: #282828;
+  font-family: var(--base-font-family);
+}
+
+/* Font Set */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-thin);
+  line-height: normal;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -2px;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  color: var(--gray-color);
+  font-size: var(--font-size-h6);
+  line-height: inherit;
+  margin: 0;
+}
+
+p {
+  color: var(--gray-color);
+  font-size: var(--font-size-M);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5em;
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+}
+
+/* OP */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: red;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+/* ================================================================= */
+
+/* Header */
+#navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cc0000;
+}
+.navbar_icons {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_icons a {
+  padding: 8px 12px;
+}
+.navbar_icons input {
+  background-color: #cc0000;
+  border: none;
+  color: var(--white-color);
+}
+.navbar_logo {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar_menu {
+  width: 40%;
+}
+.navbar_menu ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar_menu ul li {
+  padding: 8px;
+}
+.navbar_menu ul li:hover {
+  background-color: white;
+}
+.navbar_menu ul li a {
+  font-size: 0.8vw;
+  padding: 8px;
+}
+
+/* Ariticle1 VIDEOS */
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video {
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+.video img {
+  width: 100%;
+  min-height: 250px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.video h2 {
+  height: 0;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  top: -14vw;
+}
+
+.button {
+  text-align: center;
+  padding: 30px;
+}
+.button button {
+  font-size: 24px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border-radius: 12px;
+}
+.button > button:hover {
+  background-color: white;
+  color: red;
+}
