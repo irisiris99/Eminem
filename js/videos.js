@@ -54,3 +54,14 @@ button.addEventListener('click', () => {
 	videos[11].style.display = 'block';
 	button.style.display = 'none';
 })
+
+const toggleBtn = document.querySelector('.togglebtn');
+const menu = document.querySelector('.navbar_menu');
+const navbar = document.querySelector('#navbar');
+
+	toggleBtn.addEventListener('click', () => {
+		menu.classList.toggle('active');
+		navbar.style.marginBottom = ('165px');
+	});
+
+

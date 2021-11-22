@@ -51,7 +51,6 @@ btn5.addEventListener('click', ()=>{
 
 const albumtext = document.getElementsByClassName('ab-text');
 const albumimg = document.querySelectorAll('.ab-img img');
-console.log(albumimg);
 
 for (let i = 0; i < 12; i++) {
 	albumtext[i].addEventListener('mouseover', () => {
@@ -64,3 +63,10 @@ for (let i = 0; i < 12; i++) {
 		albumimg[i].style.opacity = '1';
 	})
 }
+
+const toggleBtn = document.querySelector('.togglebtn');
+const menu = document.querySelector('.navbar_menu');
+
+toggleBtn.addEventListener('click', () => {
+	menu.classList.toggle('active');
+});

@@ -183,21 +183,21 @@ a:hover {
 
 .navbar_menu {
   width: 40%;
-}
-.navbar_menu ul {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
-.navbar_menu ul li {
+.navbar_menu li {
   padding: 8px;
 }
-.navbar_menu ul li:hover {
+.navbar_menu li:hover {
   background-color: white;
 }
-.navbar_menu ul li a {
+.navbar_menu li a {
   font-size: 0.8vw;
   padding: 8px;
+}
+.togglebtn {
+  display: none;
 }
 
 /* Main */
@@ -415,14 +415,44 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar_menu {
-    display: none;
+  #navbar {
+    justify-content: center;
   }
   .navbar_icons {
     display: none;
   }
-  #navbar {
-    justify-content: center;
+  .navbar_menu {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    background-color: #cc0000;
+  }
+  .navbar_menu li {
+    cursor: pointer;
+  }
+  .navbar_menu li:hover {
+    background-color: #330000;
+  }
+  .navbar_menu li a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .togglebtn {
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    right: 1vw;
+  }
+  .togglebtn:hover {
+    transition: none;
+    color: white;
+  }
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
   }
   #news {
     height: 600px;

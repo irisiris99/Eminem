@@ -88,7 +88,7 @@ h1 {
 h2 {
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
-  letter-spacing: -2px;
+  letter-spacing: 2px;
 }
 
 h3 {
@@ -183,21 +183,22 @@ a:hover {
 
 .navbar_menu {
   width: 40%;
-}
-.navbar_menu ul {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
-.navbar_menu ul li {
+.navbar_menu li {
   padding: 8px;
 }
-.navbar_menu ul li:hover {
+.navbar_menu li:hover {
   background-color: white;
 }
-.navbar_menu ul li a {
+.navbar_menu li a {
   font-size: 0.8vw;
   padding: 8px;
+}
+
+.togglebtn {
+  display: none;
 }
 
 /* Ariticle1 VIDEOS */
@@ -215,14 +216,14 @@ a:hover {
 }
 .video img {
   width: 100%;
-  min-height: 250px;
+  min-height: 200px;
   cursor: pointer;
   transition: 0.2s ease-in;
 }
 
 .video h2 {
   height: 0;
-  font-size: 40px;
+  font-size: 2.5vw;
   color: white;
   cursor: pointer;
   position: relative;
@@ -269,4 +270,52 @@ footer {
 }
 .icons a:hover {
   background: ghostwhite;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    justify-content: center;
+  }
+  .navbar_icons {
+    display: none;
+  }
+  .navbar_menu {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    background-color: #cc0000;
+  }
+  .navbar_menu li {
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+  .navbar_menu li:hover {
+    background-color: #330000;
+  }
+  .navbar_menu li a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .togglebtn {
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    right: 1vw;
+  }
+  .togglebtn:hover {
+    transition: none;
+    color: white;
+  }
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+  footer .icons a {
+    padding: 8px 25px;
+  }
 }
