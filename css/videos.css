@@ -287,11 +287,10 @@ footer {
     top: 60px;
     text-align: center;
     display: none;
-    flex-direction: column;
     background-color: #cc0000;
   }
   .navbar_menu li {
-    padding: 10px 0px;
+    padding: 12px 16px;
     cursor: pointer;
   }
   .navbar_menu li:hover {
